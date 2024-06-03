@@ -1,0 +1,2 @@
+# myKINOVA_ROS
+Setting up ROS KORTEX
