@@ -1,8 +1,11 @@
 # myKINOVA_ROS
 Setting up ROS KORTEX
 
+### Set up ROS Melodic using http://wiki.ros.org/melodic/Installation/Ubuntu
 
-## Set up
+### Build ROS Kortex using https://github.com/Kinovarobotics/ros_kortex
+
+## Set up WSL on Windows
 1. Install Ubuntu 18.04 via WSL on Windows
 2. Restart Ubuntu and ensure that Systemd is running via ``sudo systemctl status``. If not, run ``sudo systemctl reset-failed``
 3. Run ``sudo apt update``
