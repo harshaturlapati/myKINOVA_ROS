@@ -5,7 +5,8 @@ Setting up ROS KORTEX
 
 ### Build ROS Kortex using https://github.com/Kinovarobotics/ros_kortex
 
-## Set up Ubuntu16.04 on WSL (needed for kinova ros kortex vision module) - https://aka.ms/wsl-ubuntu-1604
+## Install ROS Kinetic from source on Ubuntu 18
+http://wiki.ros.org/kinetic/Installation/Source
 
 ## Set up WSL on Windows
 1. Install Ubuntu 18.04 via WSL on Windows
@@ -34,3 +35,5 @@ export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg``
 1. List all WSL distributions installed ``wsl --list --all``
 2. Delete by ``wsl --unregister Ubuntu-18.04``
 3. Reinstall using Microsoft Store
+
+#### Set up Ubuntu16.04 on WSL (needed for kinova ros kortex vision module) - https://aka.ms/wsl-ubuntu-1604
