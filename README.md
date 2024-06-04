@@ -23,11 +23,11 @@ http://wiki.ros.org/kinetic/Installation/Source
 8. Optional if you only have one desktop environment installed
 ``echo gnome-session > ~/.xsession``
 9. Create ``~/.xsessionrc`` with the following:
-``export GNOME_SHELL_SESSION_MODE=ubuntu
-export XDG_CURRENT_DESKTOP=ubuntu:GNOME
-export XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop
-export WAYLAND_DISPLAY=
-export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg``
+``export GNOME_SHELL_SESSION_MODE=ubuntu``
+``export XDG_CURRENT_DESKTOP=ubuntu:GNOME``
+``export XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop``
+``export WAYLAND_DISPLAY=``
+``export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg``
 10. Restart the remote desktop service : ``sudo systemctl restart xrdp``
 11. Open a RDP client and tune into ``localhost:3390``.
 
