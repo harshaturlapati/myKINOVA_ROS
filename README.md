@@ -24,18 +24,14 @@ http://wiki.ros.org/kinetic/Installation/Source
 ``echo gnome-session > ~/.xsession``
 9. Create ``~/.xsessionrc`` with the following:
 10. 
-``export GNOME_SHELL_SESSION_MODE=ubuntu``
+``export GNOME_SHELL_SESSION_MODE=ubuntu\
+export XDG_CURRENT_DESKTOP=ubuntu:GNOME\
+export XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop\
+export WAYLAND_DISPLAY=\
+export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg``
 
-``export XDG_CURRENT_DESKTOP=ubuntu:GNOME``
-
-``export XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop``
-
-``export WAYLAND_DISPLAY=``
-
-``export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg``
-
-11. Restart the remote desktop service : ``sudo systemctl restart xrdp``
-12. Open a RDP client and tune into ``localhost:3390``.
+12. Restart the remote desktop service : ``sudo systemctl restart xrdp``
+13. Open a RDP client and tune into ``localhost:3390``.
 
 ## To reset WSL
 1. List all WSL distributions installed ``wsl --list --all``
