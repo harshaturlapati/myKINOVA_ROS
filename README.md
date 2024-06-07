@@ -19,7 +19,11 @@ Setting up ROS KORTEX
 ``sudo sed -i 's/3389/3390/g' /etc/xrdp/xrdp.ini``
 8. Optional if you only have one desktop environment installed
 ``echo gnome-session > ~/.xsession``
-9. Create ```console ~/.xsessionrc``` with the following:
+9. Create
+```console
+~/.xsessionrc
+```
+with the following:
 ```console
 export GNOME_SHELL_SESSION_MODE=ubuntu
 export XDG_CURRENT_DESKTOP=ubuntu:GNOME
