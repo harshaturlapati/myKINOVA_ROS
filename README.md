@@ -1,10 +1,6 @@
 # myKINOVA_ROS
 Setting up ROS KORTEX
 
-### Set up ROS Melodic using http://wiki.ros.org/melodic/Installation/Ubuntu
-
-### Build ROS Kortex using https://github.com/Kinovarobotics/ros_kortex
-
 ## Build ROS2 Kortex
 1. Source setup.bash
 ```console
