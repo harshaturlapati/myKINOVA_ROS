@@ -5,6 +5,14 @@ Setting up ROS KORTEX
 
 ### Build ROS Kortex using https://github.com/Kinovarobotics/ros_kortex
 
+## Build ROS2 Kortex
+1. Source setup.bash
+```console
+source /opt/ros/humble/setup.bash
+```
+2. Follow the instructions in "Getting started" in https://github.com/PickNikRobotics/ros2_kortex/tree/main
+3. 
+
 ## Set up WSL on Windows
 1. Install Ubuntu 18.04/22.04 via WSL on Windows
 2. Restart Ubuntu and ensure that Systemd is running via ``sudo systemctl status``. If not, run
