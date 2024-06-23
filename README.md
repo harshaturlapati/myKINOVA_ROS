@@ -60,3 +60,10 @@ sudo systemctl restart xrdp
 3. Reinstall using Microsoft Store
 
 #### Set up Ubuntu16.04 on WSL (needed for kinova ros kortex vision module) - https://aka.ms/wsl-ubuntu-1604
+
+### Misc notes for Ubuntu 18
+1. Install tweak for multiple desktops
+```console
+sudo add-apt-repository universe
+sudo apt install gnome-tweak-tool
+```
