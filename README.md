@@ -1,6 +1,39 @@
 # myKINOVA_ROS
 Setting up ROS KORTEX
 
+## Kinova vision calibration
+Python3 requirements
+1. emwh>=0.1.6
+```console
+sudo apt-get install -y python3-ewmh
+```
+2. mss>=6.1.0
+```console
+python3 -m pip install -U --user mss
+```
+3. numpy>=1.17.4
+```console
+pip3 install numpy==1.19.2
+```
+4. opencv_python>=4.6.0.66
+```console
+pip3 install opencv-python
+```
+5. python-xlib>=0.31
+```console
+pip3 install python-xlib
+```
+6. rospy>=1.15.14
+
+7. scipy>=1.8.1
+
+8. tf>=1.13.2
+
+9. tf2-ros>=0.7.5
+
+10. tf2-py>=0.7.5
+
+
 ## Build ROS2 Kortex
 1. Source setup.bash
 ```console
