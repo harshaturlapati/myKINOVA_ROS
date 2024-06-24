@@ -100,3 +100,7 @@ sudo systemctl restart xrdp
 sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool
 ```
+2. Install terminator for multiple terminals
+```console
+sudo apt install terminator
+```
