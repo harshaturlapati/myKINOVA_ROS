@@ -99,6 +99,7 @@ rosrun rviz rviz
 sudo apt install ros-melodic-moveit
 ```
 2. Build ROS_KORTEX
+```console
         sudo apt install python3 python3-pip
         sudo python3 -m pip install conan==1.59
         conan config set general.revisions_enabled=1
@@ -109,19 +110,20 @@ sudo apt install ros-melodic-moveit
         git clone -b <branch-name> https://github.com/Kinovarobotics/ros_kortex.git
         cd ../
         rosdep install --from-paths src --ignore-src -y
-
+```
 > `<branch-name>` corresponds to the branch matching your ROS version (noetic-devel, melodic-devel, kinetic-devel)
 
 > Instructions are for conan V1.X only and it won't work for versions >=2.0.0
 
 Then, to build and source the workspace:
-
+```console
         catkin_make
         source devel/setup.bash
-
+```
 ## Control Kinova using Kortex
+```console
         roslaunch kortex_driver kortex_driver.launch ip_address:=192.180.0.200 gripper:=robotiq_2f_85 dof:=7 robot_name:=mygen3
-
+```
 ### Internal Synergy Lab notes
 1. Some quick aliases to add to .bashrc
         alias moveit200='roslaunch kortex_driver kortex_driver.launch ip_address:=192.180.0.200 gripper:=robotiq_2f_85 dof:=7 robot_name:=mygen3'
