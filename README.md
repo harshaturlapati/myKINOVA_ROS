@@ -1,49 +1,8 @@
 # myKINOVA_ROS
 Setting up ROS KORTEX
 
-## Kinova vision calibration
-Python3 requirements
-1. emwh>=0.1.6
-```console
-sudo apt-get install -y python3-ewmh
-```
-2. mss>=6.1.0
-```console
-python3 -m pip install -U --user mss
-```
-3. numpy>=1.17.4
-```console
-pip3 install numpy==1.19.2
-```
-4. opencv_python>=4.6.0.66
-```console
-pip3 install opencv-python
-```
-5. python-xlib>=0.31
-```console
-pip3 install python-xlib
-```
-6. rospy>=1.15.14
-
-7. scipy>=1.8.1
-
-8. tf>=1.13.2
-
-9. tf2-ros>=0.7.5
-
-10. tf2-py>=0.7.5
-
-
-## Build ROS2 Kortex
-1. Source setup.bash
-```console
-source /opt/ros/humble/setup.bash
-```
-2. Follow the instructions in "Getting started" in https://github.com/PickNikRobotics/ros2_kortex/tree/main
-3. 
-
 ## Set up WSL on Windows
-1. Install Ubuntu 18.04/22.04 via WSL on Windows
+1. Install Ubuntu 18.04/20/22.04 via WSL on Windows
 2. Restart Ubuntu and ensure that Systemd is running via ``sudo systemctl status``. If not, run
 ```console
 sudo systemctl reset-failed
@@ -86,6 +45,11 @@ export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
 sudo systemctl restart xrdp
 ```
 11. Open a RDP client and tune into ``localhost:3390``.
+
+## Configure Kinova Kortex Vision in ROS
+1. Install [ROS Noetic]{https://wiki.ros.org/noetic/Installation/Ubuntu} for Ubuntu 20
+2. 
+Python3 requirements
 
 ## To reset WSL
 1. List all WSL distributions installed ``wsl --list --all``
