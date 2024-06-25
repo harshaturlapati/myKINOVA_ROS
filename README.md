@@ -57,7 +57,6 @@ sudo apt install gstreamer1.0-tools gstreamer1.0-libav libgstreamer1.0-dev libgs
 sudo apt-get install ros-noetic-rgbd-launch
 ```
 4. Build ros_kortex_vision ([Source](https://github.com/Kinovarobotics/ros_kortex_vision?tab=readme-ov-file#building))<br />
-To build from source, clone the latest version from this repository into your catkin workspace and compile the package.<br />
 Create a catkin workspace
 ```bash
 mkdir -p ~/catkin_ws/src
