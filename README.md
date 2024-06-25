@@ -63,7 +63,7 @@ To build from source, clone the latest version from this repository into your ca
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src/
 ```
-4.b. Clone this git repo into `~/catkin_ws/src`\
+4.b. Clone this git repo into `~/catkin_ws/src`\\
 ```bash
 git clone https://github.com/Kinovarobotics/ros_kortex_vision.git
 ```
@@ -78,15 +78,15 @@ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 5. Usage
-Start roscore (if not already started)\
+Start roscore (if not already started)\\
 ```bash
 roscore
 ```
-Start kinova_vision node\
+Start kinova_vision node\\
 ```bash
 roslaunch kinova_vision kinova_vision.launch
 ```
-Start rviz to view both cameras\
+Start rviz to view both cameras\\
 ```bash
 rosrun rviz rviz
 ```
