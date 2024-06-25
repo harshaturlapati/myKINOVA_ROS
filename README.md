@@ -48,8 +48,50 @@ sudo systemctl restart xrdp
 
 ## Configure Kinova Kortex Vision in ROS
 1. Install [ROS Noetic](https://wiki.ros.org/noetic/Installation/Ubuntu) for Ubuntu 20
-2. 
-Python3 requirements
+2. Get dependencies installed
+```console
+sudo apt install gstreamer1.0-tools gstreamer1.0-libav libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-good1.0-dev gstreamer1.0-plugins-good gstreamer1.0-plugins-base
+```
+3. Install ROS package rgbd_launch
+```console
+sudo apt-get install ros-noetic-rgbd-launch
+```
+4. Build ros_kortex_vision ([Source](https://github.com/Kinovarobotics/ros_kortex_vision?tab=readme-ov-file#building))\
+To build from source, clone the latest version from this repository into your catkin workspace and compile the package.\
+4.a. Create a catkin workspace
+```bash
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src/
+```
+4.b. Clone this git repo into `~/catkin_ws/src`\
+```bash
+git clone https://github.com/Kinovarobotics/ros_kortex_vision.git
+```
+```bash
+cd ~/catkin_ws/src/
+catkin_init_workspace 
+cd ..
+catkin_make clean
+catkin_make
+catkin_make install
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+5. Usage
+Start roscore (if not already started)\
+```bash
+roscore
+```
+Start kinova_vision node\
+```bash
+roslaunch kinova_vision kinova_vision.launch
+```
+Start rviz to view both cameras\
+```bash
+rosrun rviz rviz
+```
+## Configure Kinova Kortex in ROS
+
 
 ## To reset WSL
 1. List all WSL distributions installed ``wsl --list --all``
