@@ -2,7 +2,7 @@
 Setting up ROS KORTEX
 
 ## Set up WSL on Windows
-1. Install Ubuntu 18.04/20/22.04 via WSL on Windows
+1. Install Ubuntu 18.04/20/22.04 via WSL on Windows using Microsoft Store --> Ubuntu 20 --> Get.
 2. Restart Ubuntu and ensure that Systemd is running via ``sudo systemctl status``. If not, run
 ```console
 sudo systemctl reset-failed
