@@ -100,16 +100,16 @@ sudo apt install ros-melodic-moveit
 ```
 2. Build ROS_KORTEX
 ```console
-        sudo apt install python3 python3-pip
-        sudo python3 -m pip install conan==1.59
-        conan config set general.revisions_enabled=1
-        conan profile new default --detect > /dev/null
-        conan profile update settings.compiler.libcxx=libstdc++11 default
-        mkdir -p catkin_workspace/src
-        cd catkin_workspace/src
-        git clone -b <branch-name> https://github.com/Kinovarobotics/ros_kortex.git
-        cd ../
-        rosdep install --from-paths src --ignore-src -y
+sudo apt install python3 python3-pip
+sudo python3 -m pip install conan==1.59
+conan config set general.revisions_enabled=1
+conan profile new default --detect > /dev/null
+conan profile update settings.compiler.libcxx=libstdc++11 default
+mkdir -p catkin_workspace/src
+cd catkin_workspace/src
+git clone -b <branch-name> https://github.com/Kinovarobotics/ros_kortex.git
+cd ../
+rosdep install --from-paths src --ignore-src -y
 ```
 > `<branch-name>` corresponds to the branch matching your ROS version (noetic-devel, melodic-devel, kinetic-devel)
 
@@ -117,20 +117,22 @@ sudo apt install ros-melodic-moveit
 
 Then, to build and source the workspace:
 ```console
-        catkin_make
-        source devel/setup.bash
+catkin_make
+source devel/setup.bash
 ```
 ## Control Kinova using Kortex
 ```console
-        roslaunch kortex_driver kortex_driver.launch ip_address:=192.180.0.200 gripper:=robotiq_2f_85 dof:=7 robot_name:=mygen3
+roslaunch kortex_driver kortex_driver.launch ip_address:=192.180.0.200 gripper:=robotiq_2f_85 dof:=7 robot_name:=mygen3
 ```
 ### Internal Synergy Lab notes
 1. Some quick aliases to add to .bashrc
-        alias moveit200='roslaunch kortex_driver kortex_driver.launch ip_address:=192.180.0.200 gripper:=robotiq_2f_85 dof:=7 robot_name:=mygen3'
-        alias rgbd200='roslaunch kinova_vision kinova_vision_rgbd.launch device:=192.180.0.200'
-        alias cv_calibrate='roslaunch cv_calibration rviz_calibration.launch'
-        alias imsave='rosrun image_view image_saver image:=/camera/color/image_raw'
-        alias depthsave='rosrun image_view image_saver image:=/camera/depth_registered/image_raw _encoding:=16UC1 _filename_format:="image%04i.png"'
+```console
+alias moveit200='roslaunch kortex_driver kortex_driver.launch ip_address:=192.180.0.200 gripper:=robotiq_2f_85 dof:=7 robot_name:=mygen3'
+alias rgbd200='roslaunch kinova_vision kinova_vision_rgbd.launch device:=192.180.0.200'
+alias cv_calibrate='roslaunch cv_calibration rviz_calibration.launch'
+alias imsave='rosrun image_view image_saver image:=/camera/color/image_raw'
+alias depthsave='rosrun image_view image_saver image:=/camera/depth_registered/image_raw _encoding:=16UC1 _filename_format:="image%04i.png"'
+```
 2. ``source .bashrc``
 
 ## To reset WSL
