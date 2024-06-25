@@ -61,7 +61,7 @@ sudo apt-get install ros-noetic-rgbd-launch
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src/
 ```
-Clone this git repo into `~/catkin_ws/src`
+Clone the git repo into `~/catkin_ws/src`
 ```bash
 git clone https://github.com/Kinovarobotics/ros_kortex_vision.git
 ```
@@ -89,7 +89,32 @@ Start rviz to view both cameras<br />
 rosrun rviz rviz
 ```
 ## Configure Kinova Kortex in ROS
+1. Install moveit
+```console
+sudo apt install ros-melodic-moveit
+```
+2. Build ROS_KORTEX
+These are the instructions to run in a terminal to create the workspace, clone the `ros_kortex` repository and install the necessary ROS dependencies:
 
+        sudo apt install python3 python3-pip
+        sudo python3 -m pip install conan==1.59
+        conan config set general.revisions_enabled=1
+        conan profile new default --detect > /dev/null
+        conan profile update settings.compiler.libcxx=libstdc++11 default
+        mkdir -p catkin_workspace/src
+        cd catkin_workspace/src
+        git clone -b <branch-name> https://github.com/Kinovarobotics/ros_kortex.git
+        cd ../
+        rosdep install --from-paths src --ignore-src -y
+
+> `<branch-name>` corresponds to the branch matching your ROS version (noetic-devel, melodic-devel, kinetic-devel)
+
+> Instructions are for conan V1.X only and it won't work for versions >=2.0.0
+
+Then, to build and source the workspace:
+
+        catkin_make
+        source devel/setup.bash
 
 ## To reset WSL
 1. List all WSL distributions installed ``wsl --list --all``
