@@ -58,12 +58,12 @@ sudo apt-get install ros-noetic-rgbd-launch
 ```
 4. Build ros_kortex_vision ([Source](https://github.com/Kinovarobotics/ros_kortex_vision?tab=readme-ov-file#building))<br />
 To build from source, clone the latest version from this repository into your catkin workspace and compile the package.<br />
-4.a. Create a catkin workspace
+Create a catkin workspace
 ```bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src/
 ```
-<br />4.b. Clone this git repo into `~/catkin_ws/src`<br />
+Clone this git repo into `~/catkin_ws/src`
 ```bash
 git clone https://github.com/Kinovarobotics/ros_kortex_vision.git
 ```
