@@ -88,15 +88,15 @@ Start rviz to view both cameras<br />
 ```bash
 rosrun rviz rviz
 ```
+6. Save image using
+        rosrun image_view image_saver image:=/camera/color/image_raw
+   
 ## Configure Kinova Kortex in ROS
 1. Install moveit
 ```console
 sudo apt install ros-melodic-moveit
 ```
-        adgsdgsdg
 2. Build ROS_KORTEX
-These are the instructions to run in a terminal to create the workspace, clone the `ros_kortex` repository and install the necessary ROS dependencies:
-
         sudo apt install python3 python3-pip
         sudo python3 -m pip install conan==1.59
         conan config set general.revisions_enabled=1
@@ -116,6 +116,18 @@ Then, to build and source the workspace:
 
         catkin_make
         source devel/setup.bash
+
+## Control Kinova using Kortex
+        roslaunch kortex_driver kortex_driver.launch ip_address:=192.180.0.200 gripper:=robotiq_2f_85 dof:=7 robot_name:=mygen3
+
+### Internal Synergy Lab notes
+1. Some quick aliases to add to .bashrc
+        alias moveit200='roslaunch kortex_driver kortex_driver.launch ip_address:=192.180.0.200 gripper:=robotiq_2f_85 dof:=7 robot_name:=mygen3'
+        alias rgbd200='roslaunch kinova_vision kinova_vision_rgbd.launch device:=192.180.0.200'
+        alias cv_calibrate='roslaunch cv_calibration rviz_calibration.launch'
+        alias imsave='rosrun image_view image_saver image:=/camera/color/image_raw'
+        alias depthsave='rosrun image_view image_saver image:=/camera/depth_registered/image_raw _encoding:=16UC1 _filename_format:="image%04i.png"'
+2. ``source .bashrc``
 
 ## To reset WSL
 1. List all WSL distributions installed ``wsl --list --all``
