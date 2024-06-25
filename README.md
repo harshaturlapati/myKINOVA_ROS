@@ -93,6 +93,7 @@ rosrun rviz rviz
 ```console
 sudo apt install ros-melodic-moveit
 ```
+        adgsdgsdg
 2. Build ROS_KORTEX
 These are the instructions to run in a terminal to create the workspace, clone the `ros_kortex` repository and install the necessary ROS dependencies:
 
