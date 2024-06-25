@@ -2,7 +2,7 @@
 Setting up ROS KORTEX
 
 ## Set up WSL on Windows
-1. Enable WSL. Open Powershell as Admin and run ``wsl --install``.
+1. Enable WSL. Open Powershell and run ``Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux``.
 2. Install Ubuntu 18.04/20/22.04 via WSL on Windows using Microsoft Store --> Ubuntu 20 --> Get. Start Ubuntu 20 once installed.
 > Disable local LAN if on quad-LAN adapter.
 2. Restart Ubuntu and ensure that Systemd is running via ``sudo systemctl status``. If not, run
