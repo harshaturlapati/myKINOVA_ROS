@@ -47,7 +47,7 @@ sudo systemctl restart xrdp
 11. Open a RDP client and tune into ``localhost:3390``.
 
 ## Configure Kinova Kortex Vision in ROS
-1. Install [ROS Noetic]{https://wiki.ros.org/noetic/Installation/Ubuntu} for Ubuntu 20
+1. Install [ROS Noetic](https://wiki.ros.org/noetic/Installation/Ubuntu) for Ubuntu 20
 2. 
 Python3 requirements
 
