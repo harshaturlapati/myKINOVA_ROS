@@ -32,7 +32,7 @@ echo gnome-session > ~/.xsession
 ```
 9. Create xsessionrc
 ```console
-vim ~/.xsessionrc
+gedit ~/.xsessionrc
 ```
 with the following contents:
 ```console
