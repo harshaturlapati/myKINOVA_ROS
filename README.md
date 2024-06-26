@@ -42,6 +42,10 @@ export XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snap
 export WAYLAND_DISPLAY=
 export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
 ```
+Verify that is working by trying
+```console
+cat ~/.xsessionrc
+```
 10. Restart the remote desktop service :
 ```console
 sudo systemctl restart xrdp
